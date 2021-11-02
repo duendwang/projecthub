@@ -1,0 +1,6 @@
+bin/
+logs/
+tmp/
+*.code-workshop
+*.env
+app_local.php
