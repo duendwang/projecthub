@@ -44,7 +44,7 @@ class ProfilesTable extends Table
         parent::initialize($config);
 
         $this->setTable('profiles');
-        $this->setDisplayField('discord_id');
+        $this->setDisplayField('full_name');
         $this->setPrimaryKey('discord_id');
 
         $this->addBehavior('Timestamp');
@@ -88,5 +88,10 @@ class ProfilesTable extends Table
             ->allowEmptyString('modifier');
 
         return $validator;
+    }
+
+    protected function _getFullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
     }
 }
