@@ -2,6 +2,6 @@ bin/
 logs/
 tmp/
 vendor/
-*.code-workshop
+*.code-workspace
 *.env
 app_local.php
