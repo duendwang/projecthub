@@ -56,6 +56,14 @@ class CompanyProfilesTable extends Table
             'foreignKey' => 'profile_id',
             'joinType' => 'INNER',
         ]);
+        $this->belongsTo('CompanyProfileCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('CompanyProfileModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

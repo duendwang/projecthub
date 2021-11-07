@@ -56,6 +56,14 @@ class ProfileProjectsTable extends Table
             'foreignKey' => 'project_id',
             'joinType' => 'INNER',
         ]);
+        $this->belongsTo('ProfileProjectCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('ProfileProjectModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

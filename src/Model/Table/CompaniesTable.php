@@ -54,6 +54,14 @@ class CompaniesTable extends Table
         $this->hasMany('Projects', [
             'foreignKey' => 'company_id',
         ]);
+        $this->belongsTo('CompanyCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('CompanyModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

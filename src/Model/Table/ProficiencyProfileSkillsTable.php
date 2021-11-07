@@ -65,6 +65,14 @@ class ProficiencyProfileSkillsTable extends Table
         $this->hasMany('ProfileProjectSkills', [
             'foreignKey' => 'proficiency_profile_skill_id',
         ]);
+        $this->belongsTo('ProficiencyProfileSkillCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('ProficiencyProfileSkillModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

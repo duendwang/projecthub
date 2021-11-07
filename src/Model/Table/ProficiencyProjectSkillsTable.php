@@ -61,6 +61,14 @@ class ProficiencyProjectSkillsTable extends Table
             'foreignKey' => 'proficiency_id',
             'joinType' => 'INNER',
         ]);
+        $this->belongsTo('ProficicneyProjectSkillCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('ProficicneyProjectSkillModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

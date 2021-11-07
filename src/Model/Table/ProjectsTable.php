@@ -63,6 +63,14 @@ class ProjectsTable extends Table
         $this->hasMany('ProfileProjects', [
             'foreignKey' => 'project_id',
         ]);
+        $this->belongsTo('ProjectCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('ProjectModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**

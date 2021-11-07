@@ -54,6 +54,14 @@ class ProficienciesTable extends Table
         $this->hasMany('ProficiencyProjectSkills', [
             'foreignKey' => 'proficiency_id',
         ]);
+        $this->belongsTo('ProficiencyCreators', [
+            'foreignKey' => 'creator',
+            'className' => 'Profiles'
+        ]);
+        $this->belongsTo('ProficiencyModifiers', [
+            'foreignKey' => 'modifier',
+            'className' => 'Profiles'
+        ]);
     }
 
     /**
