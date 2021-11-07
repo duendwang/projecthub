@@ -66,7 +66,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'Companies'
         ]);
-        $this->belongsTo('CompanyModifiers', [
+        $this->hasMany('CompanyModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'Companies'
         ]);
@@ -74,7 +74,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'CompanyProfiles'
         ]);
-        $this->belongsTo('CompanyProfileModifiers', [
+        $this->hasMany('CompanyProfileModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'CompanyProfiles'
         ]);
@@ -82,7 +82,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'Proficiencies'
         ]);
-        $this->belongsTo('ProficiencyModifiers', [
+        $this->hasMany('ProficiencyModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'Proficiencies'
         ]);
@@ -90,7 +90,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'ProficiencyProfileSkills'
         ]);
-        $this->belongsTo('ProficiencyProfileSkillModifiers', [
+        $this->hasMany('ProficiencyProfileSkillModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'ProficiencyProfileSkills'
         ]);
@@ -98,7 +98,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'ProficiencyProjectSkills'
         ]);
-        $this->belongsTo('ProficiencyProjectSkillModifiers', [
+        $this->hasMany('ProficiencyProjectSkillModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'ProficiencyProjectSkills'
         ]);
@@ -106,7 +106,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'ProfileProjectSkills'
         ]);
-        $this->belongsTo('ProfileProjectSkillModifiers', [
+        $this->hasMany('ProfileProjectSkillModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'ProfileProjectSkills'
         ]);
@@ -114,11 +114,11 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'ProfileProjects'
         ]);
-        $this->belongsTo('ProfileProjectModifiers', [
+        $this->hasMany('ProfileProjectModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'ProfileProjects'
         ]);
-        $this->belongsTo('ProfileModifiers', [
+        $this->hasMany('ProfileModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'Profiles'
         ]);
@@ -126,7 +126,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'Projects'
         ]);
-        $this->belongsTo('ProjectModifiers', [
+        $this->hasMany('ProjectModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'Projects'
         ]);
@@ -134,7 +134,7 @@ class ProfilesTable extends Table
             'foreignKey' => 'creator',
             'className' => 'Skills'
         ]);
-        $this->belongsTo('SkillModifiers', [
+        $this->hasMany('SkillModifiers', [
             'foreignKey' => 'modifier',
             'className' => 'Skills'
         ]);
